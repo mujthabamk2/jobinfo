@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - eNno Bootstrap Template</title>
+  <meta name="description" content="JobInfo helps job seekers in India get verified job alerts via WhatsApp. Easy, fast, and free to use.">
+  <meta name="keywords" content="WhatsApp jobs, India jobs, Job alerts, Kerala hiring, JobInfo">
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #5f687b;  /* The default color of the main navmenu links */
+    --nav-hover-color: #007bff; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #5f687b; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #007bff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  .section-title{
+    margin-bottom: 10px;
+  }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/Jobinfo.png" alt=""> -->
+        <h1 class="sitename">
+          <span class="job-red">Job</span><span class="info-black">info</span>
+        </h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#submit-job" class="active">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#recruiter-benefits">Benefits</a></li>
+          <li><a href="#join-now">Network</a></li>
+          <li><a href="#faq">FaQ</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted btn-primary" href="index.html">Explore jobinfo</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="submit-job" class="container py-5" data-aos="fade-up">
+
+		<!-- Section Title -->
+		<div class="container section-title" data-aos="fade-up">
+			<span>Submit Job Vacancy<br></span>
+			<h2>Share Vacancy</h2>
+			<p>Share your job vacancy with us to reach a wider pool of candidates through JobInfo.</p>
+		</div><!-- End Section Title -->
+		
+		<form name="job-form" class="job-form bg-white p-4 rounded shadow">
+			<div class="row gy-3">
+			<div class="col-md-6">
+				<input type="text" name="job-position" class="form-control" placeholder="Job Position" required>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="location" class="form-control" placeholder="Job Location" required>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="company-name" class="form-control" placeholder="Company/Shop Name" required>
+			</div>
+			<div class="col-md-6">
+				<select name="experience-level" class="form-control" required>
+				<option value="">Experience Required?</option>
+				<option value="Fresher">Fresher</option>
+				<option value="Experienced">Experienced</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="years-of-experience" class="form-control" placeholder="Years of Experience (if any)">
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="salary" class="form-control" placeholder="Expected Salary">
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="age-limit" class="form-control" placeholder="Age Limit">
+			</div>
+			<div class="col-md-6">
+				<select name="gender" class="form-control">
+				<option value="">Gender Preference</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Any">Any</option>
+				</select>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="contact-number" class="form-control" placeholder="Recruiter Contact Number" required>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="whatsapp-number" class="form-control" placeholder="WhatsApp Number" required>
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="skills" class="form-control" placeholder="Skills Required">
+			</div>
+			<div class="col-md-6">
+				<input type="text" name="qualification" class="form-control" placeholder="Qualification">
+			</div>
+			<div class="col-12">
+				<input type="email" name="submitted-by-email" class="form-control" placeholder="Your Email" required>
+			</div>
+			<div class="col-12 text-center">
+				<button type="submit" id="submit" class="btn btn-primary px-4">Submit Vacancy</button>
+			</div>
+			</div>
+		</form>
+	</section>
+
+
+	<!-- How It Works Section -->
+	<section id="how-it-works" class="py-5 bg-light" data-aos="fade-up">
+		<div class="container section-title">
+		<span>Get Started Easily</span>
+		<h2>How It Works</h2>
+		<p>Follow these simple steps to start receiving job applications from potential candidates.</p>
+		</div>
+		<div class="container">
+		<div class="row text-center gy-4">
+			<div class="col-lg-4">
+			<div class="icon-box p-4 shadow-sm rounded">
+				<div class="icon mb-3"><i class="bi bi-pencil-square fs-1 text-primary"></i></div>
+				<h5>Fill the Job Form</h5>
+				<p>Enter details like position, experience, contact info and skills required.</p>
+			</div>
+			</div>
+			<div class="col-lg-4">
+			<div class="icon-box p-4 shadow-sm rounded">
+				<div class="icon mb-3"><i class="bi bi-upload fs-1 text-primary"></i></div>
+				<h5>Submit the Vacancy</h5>
+				<p>Your job will be reviewed and then shared with thousands of job seekers.</p>
+			</div>
+			</div>
+			<div class="col-lg-4">
+			<div class="icon-box p-4 shadow-sm rounded">
+				<div class="icon mb-3"><i class="bi bi-whatsapp fs-1 text-primary"></i></div>
+				<h5>Receive Applications</h5>
+				<p>We collect all applications, list them out, and share as a Google Form via WhatsApp.</p>
+			</div>
+			</div>
+		</div>
+		</div>
+  </section>
+  
+
+  <!-- Recruiter Benefits Section -->
+  <section id="recruiter-benefits" class="features pt-5 pb-5" data-aos="fade-up">
+    <div class="container">
+
+      <!-- Section Title -->
+      <div class="section-title">
+        <span>Why Choose JobInfo?</span>
+        <h2>Benefits for Recruiters</h2>
+        <p>Discover why hundreds of businesses trust JobInfo to find the right candidates.</p>
+      </div>
+
+      <div class="row gy-4 align-items-center">
+
+        <div class="col-md-6">
+          <img src="assets/img/hero-img3.png" class="img-fluid" alt="Recruiter Benefits Illustration">
+        </div>
+
+        <div class="col-md-6">
+          <div class="icon-box d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-bullseye text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Reach the Right Audience</h4>
+              <p class="description">Your vacancies are promoted directly to job seekers via WhatsApp and our network channels.</p>
+            </div>
+          </div>
+
+          <div class="icon-box d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0 me-3"><i class="bi bi-clock-history text-primary fs-3"></i></div>
+            <div>
+              <h4 class="title">Post in Minutes</h4>
+              <p class="description">No logins or complex setups—just fill the form and submit your vacancy easily.</p>
+            </div>
+          </div>
+
+          <div class="icon-box d-flex align-items-start mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0 me-3"><i class="bi bi-whatsapp text-primary fs-3"></i></div>
+            <div>
+              <h4 class="title">Get Direct Applications</h4>
+              <p class="description">Receive candidate inquiries and applications straight to your WhatsApp or Email.</p>
+            </div>
+          </div>
+
+          <div class="icon-box d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0 me-3"><i class="bi bi-currency-rupee text-primary fs-3"></i></div>
+            <div>
+              <h4 class="title">Completely Free</h4>
+              <p class="description">No hidden fees. Posting vacancies is 100% free for all recruiters and business owners.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Join Now Call-to-Action Section -->
+  <section id="join-now" class="cta py-5 bg-light" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="mb-3">Join Our Hiring Network</h2>
+      <p class="mb-4">
+        Stay connected with JobInfo so we're just a message away when you have job openings.<br>
+        Join our job-sharing community today and easily reach thousands of job seekers whenever you're hiring.
+      </p>
+      <p class="text-muted mb-4">
+        <small>No spam, no pressure—feel free to mute notifications. Just join once and reach out when you're ready to post a vacancy.</small>
+      </p>
+      <a href="https://t.me/your_channel_link" class="btn btn-outline-primary btn-lg me-2">
+        Join WhatsApp Channel
+      </a>
+      <a href="https://chat.whatsapp.com/your_group_link" class="btn btn-outline-primary btn-lg">
+        Join WhatsApp Community
+      </a>        
+    </div>
+  </section>
+
+
+  <!-- Recruiter FAQ Section -->
+  <section id="faq" class="faq-section" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Asked Questions</span>
+      <h2>Recruiter FAQs</h2>
+      <p>Find answers to the most common questions recruiters ask when posting jobs.</p>
+    </div><!-- End Section Title -->
+
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <span>How do I post a job on JobInfo?</span>
+          <i class="arrow"></i>
+        </button>
+        <div class="accordion-body">
+          <p>Fill out the job form with role details, experience, salary, and contact info. Once submitted, it goes to our team for review and posting.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header collapsed">
+          <span>Is there any cost involved?</span>
+          <i class="arrow"></i>
+        </button>
+        <div class="accordion-body">
+          <p>No, listing job vacancies on JobInfo is 100% free. We aim to help companies and recruiters find talent easily.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header collapsed">
+          <span>How will I get candidate applications?</span>
+          <i class="arrow"></i>
+        </button>
+        <div class="accordion-body">
+          <p>Once your job is published, we will start to collect all interested candidate applications, list out all received applications, and share them with you as a Google Form document directly on WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header collapsed">
+          <span>Can I edit or remove a job later?</span>
+          <i class="arrow"></i>
+        </button>
+        <div class="accordion-body">
+          <p>Yes! Just message us on WhatsApp with the job title and your request. We'll handle the update or removal for you.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header collapsed">
+          <span>How long does it take for a job to go live?</span>
+          <i class="arrow"></i>
+        </button>
+        <div class="accordion-body">
+          <p>Jobs are typically reviewed and published within 24 hours. You'll receive a confirmation once it's live on our network.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-button-wrapper">
+      <a href="https://wa.me/919847178170" target="_blank" class="faq-more-button">Ask Question / Get Support</a>
+    </div>
+    </div>
+
+  </section><!-- /Recruiter FAQ Section -->
+	
+
+    <div class="container">
+      <hr>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">Jobinfo</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>hilite business park</p>
+            <p>Kerala, calicut</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 98471 78170</span></p>
+            <p><strong>Email:</strong> <span>jobinfo@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="TermsService.html">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Recruiters Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Tutorial</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#submit-job">Share vacancies</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">How to post vacancies</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">How Recruiters get applications</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Stay connected with us on social media for daily job updates, hiring tips, and news. Join our growing community and boost your career!</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright 2025</span> <a href="https://bootstrapmade.com/">Jobinfo Community</a> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <small>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon</small>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/recruiter.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
