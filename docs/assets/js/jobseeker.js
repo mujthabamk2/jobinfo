@@ -32,12 +32,18 @@ async function submitForm(formData) {
   button.innerText = "Submitting...";
 
   fetch(scriptURL, { method: "POST", body: formData })
-    .then((response) => {
-      swal("Success", "Registration Submitted!", "success");
-      form.reset();
+    .then(() => {
+      swal({
+        title: "Success!",
+        text: "Registration submitted successfully!",
+        icon: "success",
+        button: "OK",
+      }).then(() => {
+        form.reset(); // Clear form after confirmation
+      });
     })
-    .catch((error) => {
-      swal("Error", "Something went wrong. Please try again.", "error");
+    .catch(() => {
+      swal("Error", "Something went wrong. Please try again or Contact US.", "error");
     })
     .finally(() => {
       button.disabled = false;
