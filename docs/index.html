@@ -134,25 +134,21 @@
 
     </section><!-- /Featured Services Section -->
 
-    <!-- Job Seeker Registration Section -->
     <section id="register-jobseeker" class="container py-5" data-aos="fade-up">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <span>Register as Job Seeker<br></span>
         <h2>Job Seeker Registration</h2>
         <p>Fill in your details to apply for jobs or get matched with relevant openings through JobInfo.</p>
-      </div><!-- End Section Title -->
+      </div>
     
-      <form name="jobseeker-form" class="job-form bg-white p-4 rounded shadow" enctype="multipart/form-data">
+      <form id="submit-to-google-sheet" class="job-form bg-white p-4 rounded shadow" enctype="multipart/form-data">
         <div class="row gy-3">
-    
           <div class="col-md-6">
             <input type="text" name="full-name" class="form-control" placeholder="Full Name" required>
           </div>
     
           <div class="col-md-6">
-            <select name="gender" class="form-control">
+            <select name="gender" class="form-control" required>
               <option value="">Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -161,8 +157,8 @@
           </div>
     
           <div class="col-md-6">
-            <select name="Districts" class="form-control" required>
-              <option value="">Your Districts</option>
+            <select name="district" class="form-control" required>
+              <option value="">Your District</option>
               <option value="Kasaragod">Kasaragod</option>
               <option value="Kannur">Kannur</option>
               <option value="Wayanad">Wayanad</option>
@@ -179,10 +175,6 @@
               <option value="Thiruvananthapuram">Thiruvananthapuram</option>
             </select>
           </div>
-
-          <div class="col-md-6">
-            <input type="text" name="location" class="form-control" placeholder="location" required>
-          </div>
     
           <div class="col-md-6">
             <select name="qualification" class="form-control" required>
@@ -197,38 +189,30 @@
           </div>
     
           <div class="col-md-6">
-            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-          </div>
-    
-          <div class="col-md-6">
             <input type="text" name="whatsapp" class="form-control" placeholder="WhatsApp Number" required>
           </div>
     
           <div class="col-md-6">
             <input type="text" name="phone" class="form-control" placeholder="Contact Number" required>
           </div>
-
-          <!-- Date of Birth -->
+    
           <div class="col-md-6">
             <label for="dob" class="form-label">Date of Birth</label>
-            <input type="date" name="dob" id="dob" class="form-control" max="9999-12-31" required>
+            <input type="date" name="dob" class="form-control" required>
           </div>
     
-          <!-- CV Upload Field -->
           <div class="col-md-6">
-            <label for="cv-upload" class="form-label">Upload Your CV (PDF or DOC)</label>
-            <input type="file" name="cv-upload" id="cv-upload" class="form-control" accept=".pdf,.doc,.docx">
+            <label for="cv" class="form-label">Upload Your CV (PDF or DOC)</label>
+            <input type="file" name="cv" id="cv" class="form-control" accept=".pdf,.doc,.docx">
           </div>
     
           <div class="col-12 text-center">
-            <button type="submit" id="submit-jobseeker" class="btn btn-success px-4">Register</button>
+            <button type="submit" class="btn btn-success px-4">Register</button>
           </div>
         </div>
       </form>
-    
     </section>
-    <!-- End Job Seeker Registration Section -->    
-
+    
     <!-- About Section -->
     <section id="about" class="about section">
 

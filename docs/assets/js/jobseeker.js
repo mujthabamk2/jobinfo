@@ -1,79 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.forms["jobseeker-form"];
-  const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzdEo3FmDRgGdijn_tbrlD0wY0VlMOmiR2cgeX58qL02oASWu2Majjsv4SWvikcTJOl0g/exec"; // Use your deployed script URL
+const scriptURL = "https://script.google.com/macros/s/AKfycbwmvCX0NYtLmIIHouYGuKxMZOYz1kKiQ3qTrV0oDdbtBFCTDyCvl9vXF4M6wAzu6a5zTw/exec";
+const form = document.getElementById("submit-to-google-sheet");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
 
-    const statusBox = document.createElement("div");
-    statusBox.style.marginTop = "20px";
-    statusBox.style.padding = "10px";
-    statusBox.style.borderRadius = "8px";
-    statusBox.style.textAlign = "center";
-    form.appendChild(statusBox);
+  // File validation & base64 encoding
+  const fileInput = document.getElementById("cv");
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
 
-    const formData = new FormData(form);
-    const file = formData.get("cv-upload");
-
-    if (file && file.size > 0) {
-      const reader = new FileReader();
-      reader.onloadend = async () => {
-        const base64Data = reader.result.split(",")[1];
-        const uploadPayload = {
-          fileName: file.name,
-          data: base64Data,
-          contentType: file.type,
-        };
-
-        try {
-            const uploadRes = await fetch(WEB_APP_URL, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  mode: "upload",
-                  ...uploadPayload,
-                }),
-              });
-              
-
-          const fileUrl = await uploadRes.text();
-          sendForm(fileUrl);
-        } catch (err) {
-          statusBox.textContent = "❌ File upload failed. Try again.";
-          statusBox.style.backgroundColor = "#f8d7da";
-          statusBox.style.color = "#721c24";
-        }
-      };
-      reader.readAsDataURL(file);
-    } else {
-      sendForm(""); // No file
+    if (file.size > 1024 * 1024 * 2) {
+      swal("Error", "File size should be less than 2MB.", "error");
+      return;
     }
 
-    async function sendForm(fileUrl) {
-      formData.append("cvLink", fileUrl);
-
-      try {
-        const res = await fetch(WEB_APP_URL, {
-          method: "POST",
-          body: formData,
-        });
-
-        const result = await res.text();
-        if (result.includes("Success")) {
-          statusBox.textContent = "✅ Registration successful! Thank you for joining JobInfo.";
-          statusBox.style.backgroundColor = "#d4edda";
-          statusBox.style.color = "#155724";
-          form.reset();
-        } else {
-          throw new Error("Failed");
-        }
-      } catch (err) {
-        statusBox.textContent = "❌ There was a problem submitting the form.";
-        statusBox.style.backgroundColor = "#f8d7da";
-        statusBox.style.color = "#721c24";
-      }
-    }
-  });
+    const reader = new FileReader();
+    reader.onload = async function () {
+      formData.append("cv", reader.result.split(",")[1]);
+      await submitForm(formData);
+    };
+    reader.readAsDataURL(file);
+  } else {
+    await submitForm(formData);
+  }
 });
+
+async function submitForm(formData) {
+  const button = form.querySelector("button[type='submit']");
+  button.disabled = true;
+  button.innerText = "Submitting...";
+
+  fetch(scriptURL, { method: "POST", body: formData })
+    .then((response) => {
+      swal("Success", "Registration Submitted!", "success");
+      form.reset();
+    })
+    .catch((error) => {
+      swal("Error", "Something went wrong. Please try again.", "error");
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.innerText = "Register";
+    });
+}
