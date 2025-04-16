@@ -31,20 +31,22 @@ async function submitForm(formData) {
   button.disabled = true;
   button.innerText = "Submitting...";
 
+  // save WhatsApp number before form.reset
+  const phoneNumber = form.querySelector('input[name="whatsapp"]').value;
+
   fetch(scriptURL, { method: "POST", body: formData })
     .then(() => {
       swal({
         title: "Success!",
-        text: "Registration submitted successfully!",
+        text: "Registration submitted successfully! \n you will redirect to Whatsapp.",
         icon: "success",
         button: "OK",
       }).then(() => {
         form.reset(); // Clear form after confirmation
       
         // WhatsApp Confirmation
-        const phoneNumber = form.querySelector('input[name="whatsapp"]').value;
         const encodedMessage = encodeURIComponent(
-          `Hi! I have successfully registered as a job seeker with ${phoneNumber}. Please keep me updated.`
+          `Hi, I have successfully registered on Jobinfo with ${phoneNumber}. Please keep me updated.`
         );
       
         // Redirect to WhatsApp chat (you can customize phone number if needed)
