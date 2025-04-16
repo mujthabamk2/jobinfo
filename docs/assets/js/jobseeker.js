@@ -40,7 +40,17 @@ async function submitForm(formData) {
         button: "OK",
       }).then(() => {
         form.reset(); // Clear form after confirmation
+      
+        // WhatsApp Confirmation
+        const phoneNumber = form.querySelector('input[name="whatsapp"]').value;
+        const encodedMessage = encodeURIComponent(
+          `Hi! I have successfully registered as a job seeker with ${phoneNumber}. Please keep me updated.`
+        );
+      
+        // Redirect to WhatsApp chat (you can customize phone number if needed)
+        window.open(`https://wa.me/9847178170?text=${encodedMessage}`, '_blank');
       });
+      
     })
     .catch(() => {
       swal("Error", "Something went wrong. Please try again or Contact US.", "error");
