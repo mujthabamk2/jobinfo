@@ -62,3 +62,35 @@ async function submitForm(formData) {
       button.innerText = "Register";
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nameInput = document.querySelector('input[name="full-name"]');
+  const whatsappInput = document.querySelector('input[name="whatsapp"]');
+  const phoneInput = document.querySelector('input[name="phone"]');
+
+  const nameRegex = /^[A-Za-z\s]{3,}$/;
+  const numberRegex = /^\d{10}$/;
+
+  function validateField(input, isValid) {
+    if (isValid) {
+      input.classList.remove("is-invalid");
+      input.classList.add("is-valid");
+    } else {
+      input.classList.remove("is-valid");
+      input.classList.add("is-invalid");
+    }
+  }
+
+  nameInput.addEventListener("input", () => {
+    validateField(nameInput, nameRegex.test(nameInput.value.trim()));
+  });
+
+  whatsappInput.addEventListener("input", () => {
+    validateField(whatsappInput, numberRegex.test(whatsappInput.value.trim()));
+  });
+
+  phoneInput.addEventListener("input", () => {
+    validateField(phoneInput, numberRegex.test(phoneInput.value.trim()));
+  });
+});
