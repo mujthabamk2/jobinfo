@@ -81,6 +81,11 @@
   border-color: #107bbc !important;
 }
 
+.btn-outline-primary2 {
+  color: #107bbc !important;
+  border-color: #107bbc !important;
+}
+
 .btn-outline-primary:hover {
   background-color: #107bbc !important;
   color: #fff !important;
