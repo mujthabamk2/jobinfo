@@ -59,9 +59,10 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#submit-job" class="active">Home</a></li>
-          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <!-- <li><a href="#how-it-works">How It Works</a></li> -->
           <li><a href="#recruiter-benefits">Benefits</a></li>
+          <li><a href="#recruiter-guidelines">Guidelines</a></li>
           <li><a href="#join-now">Network</a></li>
           <li><a href="#faq">FaQ</a></li>
         </ul>
@@ -201,13 +202,115 @@
     </div>
   </section>
 
+  <section id="recruiter-guidelines" class="features pt-5 pb-5 about section" data-aos="fade-up">
+    <div class="container">
+      <!-- Section Title -->
+      <div class="section-title">
+        <span>Recruiter Guidelines</span>
+        <h2>Posting Guidelines</h2>
+        <p>Please follow these rules to ensure a smooth and professional experience for everyone.</p>
+      </div>
+  
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <!-- Genuine Vacancies -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-check-circle text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Genuine Vacancies Only</h4>
+              <p class="description">Post only real and currently available job openings. No promotional content or false leads. All vacancies are verified before publishing.</p>
+            </div>
+          </div>
+  
+          <!-- Contact Details -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-person-lines-fill text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Clear Contact Information</h4>
+              <p class="description">Provide accurate phone numbers or WhatsApp numbers so we can forward applicant details to you seamlessly.</p>
+            </div>
+          </div>
+  
+          <!-- No Fees -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-lock text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">No Registration or Interview Fees</h4>
+              <p class="description">Charging candidates for applications or interviews is strictly prohibited.</p>
+            </div>
+          </div>
+  
 
-
-
-    <p>you can only post a vacancy at a time, if you have multiple vacancy with same requrment you dont need to post agin.</p>
-    <p>if you have same vacancy with differnt priffrence you can post that as new vecancy.</p>
-    <p>you can add additional infor mation like age limit, languge priffrence etc.. you can add that in additional-info section</p>
-    <p>if you have any conser or question, you can directly contact admin.</p>
+  
+          <!-- Additional Info -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-info-circle text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Add Extra Requirements</h4>
+              <p class="description">Include optional details like age limits, language preferences, or other instructions in the "Additional Info" section of the form.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <!-- No Scams -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-shield-x text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Strictly No Scams</h4>
+              <p class="description">Fraudulent posts will result in a permanent ban. We actively monitor and verify postings for community safety.</p>
+            </div>
+          </div>
+  
+        
+  
+          <!-- Automated Chat -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-chat-dots text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Automated Questions (Temporarily Disabled)</h4>
+              <p class="description">You can normally ask candidates follow-up questions through chat, but this feature is currently disabled due to a technical issue.</p>
+            </div>
+          </div>
+  
+          <!-- Multiple Vacancy Posts -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-files text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Post Multiple Vacancies</h4>
+              <p class="description">If the same role has different preferences (e.g., experience levels or locations), submit each variation as a separate vacancy.</p>
+            </div>
+          </div>
+  
+          <!-- Submit via WhatsApp -->
+          <div class="icon-box d-flex align-items-start mb-4">
+            <div class="icon flex-shrink-0 me-3">
+              <i class="bi bi-whatsapp text-primary fs-3"></i>
+            </div>
+            <div>
+              <h4 class="title">Submit Vacancy via WhatsApp</h4>
+              <p class="description">Prefer a direct approach? You can submit job openings by messaging us on WhatsApp at <strong>7025962176</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
 
     <section id="submit-job" class="container py-5" data-aos="fade-up">
 
@@ -231,7 +334,7 @@
       <div class="col-md-6">
 				<select name="experience-level" class="form-control" required>
 				<option value="">Experience?</option>
-				<option value="Fresher">0 - 1 year (Fresher)</option>
+				<option value="1">0 - 1 year (Fresher)</option>
 				<option value="2">2 Year</option>  
         <option value="3">3 Years</option>
         <option value="4">4 Years</option>
@@ -284,7 +387,7 @@
 			</div>
 
       <div class="col-md-6">
-				<input type="number" name="Number-of-Vacancies" class="form-control" placeholder="Number of Vacancies">
+				<input type="number" name="Number-of-Vacancies" class="form-control" placeholder="Total Vacancies (eg: 4)" required>
 			</div>
 
 			<div class="col-md-6">
@@ -431,9 +534,11 @@
           </a>
           <div class="footer-contact pt-3">
             <p>hilite business park</p>
-            <p>Kerala, calicut</p>
+            <p>Bypass, Thondayad,
+              Kozhikode</p>
+            <p>Kerala - 673014</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+91 98471 78170</span></p>
-            <p><strong>Email:</strong> <span>jobinfo@gmail.com</span></p>
+            <p><strong>Email:</strong> <span>contact@jobinfo.club</span></p>
           </div>
         </div>
 
@@ -443,7 +548,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="TermsService.html">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="TermsService.html">Terms & Condition</a></li>
           </ul>
         </div>
 
@@ -472,13 +577,14 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright 2025</span> <a href="https://bootstrapmade.com/">Jobinfo Community</a> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright 2025</span> <a href="#">Jobinfo Community</a> <span>All Rights Reserved</span></p>
+      <!-- <p>© <span>Copyright 2025</span> <a href="https://bootstrapmade.com/">Jobinfo Community</a> <span>All Rights Reserved</span></p> -->
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <small>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon</small>
+        <!-- <small>Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon</small> -->
       </div>
     </div>
 
