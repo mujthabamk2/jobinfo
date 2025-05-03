@@ -1444,3 +1444,12 @@ section,
 .faq-more-button:hover {
   background-color: #222;
 }
+
+/* for the jobseeker qustion submition pop-up window */
+.swal-centered-text .swal-text {
+  text-align: center;
+}
+.swal-text {
+  text-align: center !important;
+}
+
