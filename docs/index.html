@@ -78,8 +78,8 @@
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
             <h1>Find Your Dream Job on WhatsApp</h1>
             <p>Get daily job updates directly in your WhatsApp! Say goodbye to endless job searches and spam! – Discover your dream job at your fingertips!</p>
-            <div class="d-flex">
-              <a href="https://chat.whatsapp.com/LB8rI0BPgBTIMIhJAWAeMd" class="btn-get-started me-3"><i class="bi bi-whatsapp icon whats"></i><span>Join Community</span></a>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <a href="https://chat.whatsapp.com/LB8rI0BPgBTIMIhJAWAeMd" class="btn-get-started"><i class="bi bi-whatsapp icon whats"></i><span>Join Community</span></a>
               <a href="https://chat.whatsapp.com/LB8rI0BPgBTIMIhJAWAeMd" class="btn-get-started"><i class="bi bi-whatsapp icon whats"></i><span>Follow Channel</span></a>
             </div>
           </div>
@@ -136,7 +136,7 @@
     </section><!-- /Featured Services Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" style="padding-top: 2px;">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -284,7 +284,7 @@
 
         <div class="accordion-item">
           <button class="accordion-header collapsed">
-            <span>Where do the job listings on JobInfo come from?</span>
+            <span>Where do the vacancies come from?</span>
             <i class="arrow"></i>
           </button>
           <div class="accordion-body">
@@ -305,27 +305,28 @@
       </div>
 
       <!-- Question Submission Form (Initially Hidden) -->
-<div id="question-form-wrapper" class="accordion" style="display: none; margin-top: 20px;">
-  <form id="submit-question-form" class="php-email-form shadow p-4 rounded" style="background: #fff;">
-    <div class="form-group mb-3">
-      <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-    </div>
-    <div class="form-group mb-3">
-      <input type="text" name="whatsapp" class="form-control" placeholder="WhatsApp Number" required>
-    </div>
-    <div class="form-group mb-3">
-      <textarea name="question" class="form-control" rows="5" placeholder="Your Question" required></textarea>
-    </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
-</div>
+      <div id="question-form-wrapper" class="accordion" style="display: none; margin-top: 20px;">
+        <!-- <form id="submit-question-form" class="php-email-form shadow p-4 rounded" style="background: #fff;"> -->
+        <form id="submit-question-form"  class="php-email-form shadow p-4 rounded" style="background: #fff;" action="https://script.google.com/macros/s/AKfycbwOZfQMNz2rHlDAf2Cxh4DQmsuRUwqnD1GwK8o406Eb8cgvbTwMcS_inERubUNCenBIJA/exec" method="POST">
+          <div class="form-group mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group mb-3">
+            <input type="text" name="whatsapp" class="form-control" placeholder="WhatsApp Number" required>
+          </div>
+          <div class="form-group mb-3">
+            <textarea name="question" class="form-control" rows="5" placeholder="Your Question" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
 
   
-<div class="faq-button-wrapper">
-  <button id="toggle-question-form" class="faq-more-button">Ask Question</button>
-</div>
+      <div class="faq-button-wrapper">
+        <button id="toggle-question-form" class="faq-more-button">Ask Question</button>
+      </div>
 
 
 

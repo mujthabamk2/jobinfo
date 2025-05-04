@@ -86,7 +86,7 @@
             <h1>We Make your Hiring Simple and Fast</h1>
             <p>Say goodbye to delays and portals. Connect with active job seekers directly through WhatsApp – hiring is now just a message away!</p>
             <div class="d-flex">
-              <a href="https://chat.whatsapp.com/LB8rI0BPgBTIMIhJAWAeMd" class="btn-get-started btn-primary"><i class="bi bi-whatsapp icon whats"></i><span>Join Now</span></a>
+              <a href="https://chat.whatsapp.com/LB8rI0BPgBTIMIhJAWAeMd" class="btn-get-started btn-primary" style="width: 50%;"><i class="bi bi-whatsapp icon whats"></i><span>Join Now</span></a>
               <a href="#submit-job" class="glightbox btn-watch-video d-flex align-items-center" data-gallery="vacancy-form"><i class="bi bi-person-add btn-outline-primary2"></i><span style="padding-top: 5px;">Post Vacancy</span></a>
             </div>
           </div>
@@ -412,15 +412,20 @@
       <p class="text-muted mb-4">
         <small>No spam, no pressure—feel free to mute notifications. Just join once and reach out when you're ready to post a vacancy.</small>
       </p>
-      <a href="https://t.me/your_channel_link" class="btn btn-outline-primary btn-lg me-2">
-        Join WhatsApp Channel
-      </a>
-      <a href="https://chat.whatsapp.com/your_group_link" class="btn btn-outline-primary btn-lg">
-        Join WhatsApp Community
-      </a>        
+  
+      <!-- NEW BUTTON WRAPPER -->
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="https://t.me/your_channel_link" class="btn btn-outline-primary btn-lg flex-fill" style="min-width: 140px;">
+          Join WhatsApp Channel
+        </a>
+        <a href="https://chat.whatsapp.com/your_group_link" class="btn btn-outline-primary btn-lg flex-fill" style="min-width: 140px;">
+          Join WhatsApp Community
+        </a>  
+      </div>
+  
     </div>
   </section>
-
+  
 
   <!-- Recruiter FAQ Section -->
   <section id="faq" class="faq-section" data-aos="fade-up">
@@ -486,9 +491,27 @@
 
     </div>
 
-    <div class="faq-button-wrapper">
-      <a href="https://wa.me/919847178170" target="_blank" class="faq-more-button">Ask Question / Get Support</a>
+    <!-- Question Submission Form (Initially Hidden) -->
+    <div id="question-form-wrapper" class="accordion" style="display: none; margin-top: 20px;">
+      <!-- <form id="submit-question-form" class="php-email-form shadow p-4 rounded" style="background: #fff;"> -->
+      <form id="submit-question-form" class="php-email-form shadow p-4 rounded" style="background: #fff;" action="https://script.google.com/macros/s/AKfycbwOZfQMNz2rHlDAf2Cxh4DQmsuRUwqnD1GwK8o406Eb8cgvbTwMcS_inERubUNCenBIJA/exec" method="POST">
+        <div class="form-group mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" name="whatsapp" class="form-control" placeholder="WhatsApp Number" required>
+        </div>
+        <div class="form-group mb-3">
+          <textarea name="question" class="form-control" rows="5" placeholder="Your Question" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
+
+    <div class="faq-button-wrapper">
+      <button id="toggle-question-form" class="faq-more-button">Ask Question</button>
     </div>
 
   </section><!-- /Recruiter FAQ Section -->
@@ -585,6 +608,8 @@
   <!-- Main JS File -->
   <script src="assets/js/recruiter.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/jobseeker.js"></script> <!-- Question Submission javascrit for both page -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 
