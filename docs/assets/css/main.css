@@ -965,11 +965,16 @@ section,
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 1px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* gap between icon and text */
   padding: 12px 28px 12px 28px;
   border-radius: 50px;
   transition: 0.5s;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: auto;
 }
 
 .hero .btn-get-started:hover {
@@ -1021,6 +1026,19 @@ section,
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 13px;
+  }
+}
+
+/* Mobile specific fix */
+@media (max-width: 640px) {
+  .hero .btn-get-started {
+    width: 100%; /* full width button on mobile */
+    font-size: 14px; /* slightly smaller font */
+    padding: 14px 0px; /* more vertical padding */
+  }
+
+  .hero .btn-get-started span {
+    display: inline-block;
   }
 }
 
@@ -1453,3 +1471,28 @@ section,
   text-align: center !important;
 }
 
+
+
+#join-now .btn {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 16px;
+  border-radius: 50px; /* rounded buttons */
+  transition: 0.4s;
+  white-space: nowrap; /* Prevent text from breaking */
+}
+
+#join-now .btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  #join-now .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    flex: 1 1 45%; /* each button around 45% width */
+  }
+}
